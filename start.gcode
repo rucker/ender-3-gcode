@@ -6,6 +6,7 @@ M220 S100 ;Reset Feedrate
 M221 S100 ;Reset Flowrate
 
 G28 ;Home
+G29 ;BLTouch mesh generation
 
 G92 E0 ;Reset Extruder
 G1 Z2.0 F3000 ;Move Z Axis up
