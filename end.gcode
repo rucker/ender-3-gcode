@@ -10,5 +10,8 @@ M106 S0 ;Turn-off fan
 M104 S0 ;Turn-off hotend
 M140 S0 ;Turn-off bed
 
-M84 X Y E ;Disable all steppers but Z
+; Retract filament to prevent oozing
+G92 E0 ; First, set current extruder position to 0. Source https://forum.seemecnc.com/forum/viewtopic.php?t=1145&p=5257#p5254
+G1 E-1 F2700 ; Retract filament
 
+M84 X Y Z E; Disable steppers
